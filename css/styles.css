@@ -205,6 +205,7 @@ header .container {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/Img-header.jpg);
   max-width: 1600px;
+  height: 600px;
   padding: 200px 0;
   margin: 0 auto;
 }
@@ -227,8 +228,10 @@ header .container {
   line-height: 1.88;
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   letter-spacing: 0.06em;
+  min-width: 216px;
+  height: 50px;
   color: var(--main-color-white);
   background-color: var(--main-color-blue);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -612,6 +615,7 @@ header .container {
 .modal {
   position: absolute;
   width: 528px;
+  max-height: 581px;
   background-color: var(--main-color-white);
   border-radius: 4px;
   top: 50%;
@@ -654,11 +658,13 @@ header .container {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.04;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
   text-align: center;
+  display: block;
+  margin-bottom: 12px;
 }
 
 .input-wrap {
@@ -707,7 +713,7 @@ header .container {
   letter-spacing: 0.01em;
   color: #757575;
   display: block;
-  margin-top: 12px;
+  margin-top: 10px;
   margin-bottom: 4px;
 }
 
@@ -718,7 +724,7 @@ header .container {
   border-radius: 4px;
   resize: none;
   padding: 12px 16px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .coment-input::placeholder {
@@ -742,15 +748,11 @@ header .container {
 
 .input-check:checked + .check-text .check-icon {
   fill: var(--main-color-white);
+  outline: none;
 }
 
 .input-check:focus + .check-text span {
-  background-color: var(--main-color-blue);
-  border: none;
-}
-
-.input-check:focus + .check-text .check-icon {
-  fill: var(--main-color-white);
+  border-color: var(--main-color-blue);
 }
 
 .check-text {
